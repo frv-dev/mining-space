@@ -25,6 +25,6 @@
 
 - **Cristais:** Itens deixados após a destruição dos meteóros, devem ter uma característica peculiar, como a de cristais, não podem podem se misturar muito com o fundo, por isso, se forem azuis devem ser cuidadosamente trabalhados, ou podem ser feitos de outra cor que case com o azul no círculo das cores. Também deve haver cuidado para não parecerem simples pedras. Devem existir três modelos de cristais diferentes e do mesmo tamanho e cor.
 
-- **Ícone de escudo:** Deve ser uma pequena bola azul e outra pequena bola cinza para aparecer no HUD.
+- **Ícone de escudo:** Deve ser um pequeno escudo para aparecer no HUD.
 
 - **Ícone de vida:** Deve ser um pequeno coração para aparecer no HUD.
