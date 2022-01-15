@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://modules/characters/player/ship/ship.png" type="Texture" id=1]
-[ext_resource path="res://modules/characters/player/ship/Ship.gd" type="Script" id=2]
+[ext_resource path="res://modules/characters/player/ship/assets/ship.png" type="Texture" id=1]
+[ext_resource path="res://modules/characters/player/ship/scripts/Ship.gd" type="Script" id=2]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -35,7 +35,7 @@ tracks/0/keys = {
 "values": [ 0, 1 ]
 }
 
-[node name="Ship" type="Node2D"]
+[node name="Ship" type="Node2D" groups=["main_player"]]
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true

@@ -50,13 +50,13 @@ func _keys_controller_movement_mechanics(delta: float) -> void:
 	var x_direction := 0.0
 	var y_direction := 0.0
 	
-	if Input.is_action_pressed("ui_up"):
+	if Input.is_action_pressed('ui_up'):
 		y_direction -= .9
-	if Input.is_action_pressed("ui_down"):
+	if Input.is_action_pressed('ui_down'):
 		y_direction += .9
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed('ui_right'):
 		x_direction += .9
-	if Input.is_action_pressed("ui_left"):
+	if Input.is_action_pressed('ui_left'):
 		x_direction -= .9
 	
 	translate(Vector2(x_direction, y_direction) * speed * delta)
