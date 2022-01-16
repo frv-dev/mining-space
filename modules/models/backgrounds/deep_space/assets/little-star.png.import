@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/background-purple.png-aa48d36f45aca0cd50ead9046fcee791.stex"
+path="res://.import/little-star.png-91f2349da0bcfa3fbc9ce37312459fb7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://modules/backgrounds/deep_space/assets/background-purple.png"
-dest_files=[ "res://.import/background-purple.png-aa48d36f45aca0cd50ead9046fcee791.stex" ]
+source_file="res://modules/models/backgrounds/deep_space/assets/little-star.png"
+dest_files=[ "res://.import/little-star.png-91f2349da0bcfa3fbc9ce37312459fb7.stex" ]
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=0
+flags/repeat=1
 flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false

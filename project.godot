@@ -9,10 +9,10 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "TileMap",
+"base": "Reference",
 "class": "BackgroundDisplacement",
 "language": "GDScript",
-"path": "res://modules/backgrounds/deep_space/scripts/BakcgroundDisplacement.gd"
+"path": "res://modules/models/backgrounds/deep_space/scripts/BakcgroundDisplacement.gd"
 }, {
 "base": "Reference",
 "class": "ScreenSize",
@@ -23,11 +23,17 @@ _global_script_classes=[ {
 "class": "Ship",
 "language": "GDScript",
 "path": "res://modules/characters/player/ship/scripts/Ship.gd"
+}, {
+"base": "Node2D",
+"class": "SmallShot",
+"language": "GDScript",
+"path": "res://modules/models/shots/small-shot/scripts/SmallShot.gd"
 } ]
 _global_script_class_icons={
 "BackgroundDisplacement": "",
 "ScreenSize": "",
-"Ship": ""
+"Ship": "",
+"SmallShot": ""
 }
 
 [application]
@@ -52,6 +58,7 @@ pixel=false
 "pixel snap"=true
 snapping/use_gpu_pixel_snap=true
 stretch/aspect="keep_width"
+mouse=false
 
 [input]
 
@@ -97,6 +104,10 @@ ui_click={
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true
+
+[layer_names]
+
+2d_physics/layer_2="shot"
 
 [physics]
 

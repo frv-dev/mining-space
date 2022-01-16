@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/big-star.png-0b93ca8e24d698d03efb828baf11bfb6.stex"
+path="res://.import/big-star.png-1e4f4d3a1f3cf15be5da581fdb577836.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://modules/backgrounds/deep_space/assets/big-star.png"
-dest_files=[ "res://.import/big-star.png-0b93ca8e24d698d03efb828baf11bfb6.stex" ]
+source_file="res://modules/models/backgrounds/deep_space/assets/big-star.png"
+dest_files=[ "res://.import/big-star.png-1e4f4d3a1f3cf15be5da581fdb577836.stex" ]
 
 [params]
 

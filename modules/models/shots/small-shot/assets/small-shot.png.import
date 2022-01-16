@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/little-star.png-328c6ac9a42f13505600d5e01777d33f.stex"
+path="res://.import/small-shot.png-202215c29c5b506d1c5f85706f4cd489.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://modules/backgrounds/deep_space/assets/little-star.png"
-dest_files=[ "res://.import/little-star.png-328c6ac9a42f13505600d5e01777d33f.stex" ]
+source_file="res://modules/models/shots/small-shot/assets/small-shot.png"
+dest_files=[ "res://.import/small-shot.png-202215c29c5b506d1c5f85706f4cd489.stex" ]
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=1
+flags/repeat=0
 flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
