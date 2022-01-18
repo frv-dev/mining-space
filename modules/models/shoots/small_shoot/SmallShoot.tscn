@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://modules/models/shots/small-shot/assets/small-shot.png" type="Texture" id=1]
-[ext_resource path="res://modules/models/shots/small-shot/scripts/SmallShot.gd" type="Script" id=2]
+[ext_resource path="res://modules/models/shoots/small_shoot/assets/small-shoot.png" type="Texture" id=1]
+[ext_resource path="res://modules/models/shoots/small_shoot/scripts/SmallShoot.gd" type="Script" id=2]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -19,7 +19,6 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=2]
-resource_name = "moving"
 length = 0.2
 loop = true
 tracks/0/type = "value"
@@ -39,7 +38,7 @@ tracks/0/keys = {
 radius = 18.0
 height = 16.0
 
-[node name="SmallShot" type="Node2D"]
+[node name="SmallShot" type="Node2D" groups=["shoots"]]
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true

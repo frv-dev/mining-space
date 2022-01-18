@@ -1,6 +1,6 @@
-class_name SmallShot extends Node2D
+class_name SmallShoot extends Node2D
 
-export (float) var speed := 1000.0
+export (float) var speed := 1200.0
 
 
 func _ready() -> void:

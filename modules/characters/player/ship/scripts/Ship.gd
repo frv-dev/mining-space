@@ -1,15 +1,18 @@
 class_name Ship extends Node2D
 
 export (int) var speed := 1000
+export (int) var maximum_shoots := 7
 
 var screen_size_object: ScreenSize
 
 var width: float
 var height: float
 
+signal shoot(position)
+
 
 func _ready() -> void:
-	screen_size_object = load('res://modules/scripts/ScreenSize.gd').new(self)
+	screen_size_object = load('res://scripts/ScreenSize.gd').new(self)
 	
 	var ship_sprite := ($ShipSprite as Sprite)
 	
@@ -20,9 +23,10 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	_mouse_movement_mechanics(delta)
-	_keys_controller_movement_mechanics(delta)
-	_movement_limitations(delta)
+	_mouse_and_finger_movement_mechanics(delta)
+	_keys_and_controller_movement_mechanics(delta)
+	_movement_limitations()
+	_keys_and_controller_shoot_mechanics()
 
 
 func _set_initial_position() -> void:
@@ -32,7 +36,7 @@ func _set_initial_position() -> void:
 	global_position.y = screen_size.y - (height / 2) - 100
 
 
-func _mouse_movement_mechanics(delta: float) -> void:
+func _mouse_and_finger_movement_mechanics(delta: float) -> void:
 	if Input.is_action_pressed('ui_click'):
 		var mouse_position := get_global_mouse_position()
 		
@@ -43,7 +47,7 @@ func _mouse_movement_mechanics(delta: float) -> void:
 			translate(global_position.direction_to(mouse_position) * speed * delta)
 
 
-func _keys_controller_movement_mechanics(delta: float) -> void:
+func _keys_and_controller_movement_mechanics(delta: float) -> void:
 	if Input.is_action_pressed('ui_click'):
 		return
 	
@@ -62,7 +66,7 @@ func _keys_controller_movement_mechanics(delta: float) -> void:
 	translate(Vector2(x_direction, y_direction) * speed * delta)
 
 
-func _movement_limitations(delta: float) -> void:
+func _movement_limitations() -> void:
 	var screen_size := screen_size_object.get_size()
 	
 	var x_minimum := round(width / 4)
@@ -73,3 +77,12 @@ func _movement_limitations(delta: float) -> void:
 	
 	global_position.x = clamp(global_position.x, x_minimum, x_maximum)
 	global_position.y = clamp(global_position.y, y_minimum, y_maximum)
+
+
+func _keys_and_controller_shoot_mechanics() -> void:
+	if Input.is_action_just_pressed('ui_accept'):
+		var quantity_shoots = get_tree().get_nodes_in_group('shoots').size()
+		
+		if quantity_shoots < maximum_shoots * 2:
+			emit_signal('shoot', Vector2(global_position.x - 82, global_position.y - 80))
+			emit_signal('shoot', Vector2(global_position.x + 78, global_position.y - 80))
