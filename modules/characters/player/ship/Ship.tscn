@@ -50,3 +50,9 @@ hframes = 2
 autoplay = "ThrustersAnimation"
 anims/RESET = SubResource( 1 )
 anims/ThrustersAnimation = SubResource( 2 )
+
+[node name="ShootTimer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[connection signal="timeout" from="ShootTimer" to="." method="_on_ShootTimer_timeout"]

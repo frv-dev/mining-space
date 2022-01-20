@@ -4,7 +4,7 @@ var node: Node2D
 var size: Vector2
 
 
-func _init(node: Node2D):
+func _init(node: Node2D) -> void:
 	self.node = node
 	_change_size()
 	node.get_tree().root.connect('size_changed', self, '_change_size')	

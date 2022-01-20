@@ -6,6 +6,7 @@ var preloaded_small_shoot := preload('res://modules/models/shoots/small_shoot/Sm
 func _ready() -> void:
 	pass
 
+
 func _on_Ship_shoot(position: Vector2) -> void:
 	var small_shoot := preloaded_small_shoot.instance() as SmallShoot
 	small_shoot.global_position = position
