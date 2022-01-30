@@ -1,7 +1,7 @@
 class_name Ship extends Node2D
 
 export (int) var speed := 1000
-export (int) var maximum_shoots := 12
+export (int) var maximum_shoots := 16
 
 var screen_size_object: ScreenSize
 
@@ -23,8 +23,7 @@ func _ready() -> void:
 	height = ship_sprite.texture.get_height() * ship_sprite.transform.get_scale().y
 	
 	_set_initial_position()
-	
-	($ShootTimer as Timer).one_shot = not has_automatic_shoot
+	_config_shoot_timer()
 
 
 func _process(delta: float) -> void:
@@ -103,3 +102,14 @@ func _shoot() -> void:
 	if quantity_shoots < maximum_shoots * 2:
 		emit_signal('shoot', Vector2(global_position.x - 82, global_position.y - 80))
 		emit_signal('shoot', Vector2(global_position.x + 78, global_position.y - 80))
+
+
+func _config_shoot_timer() -> void:
+	var shoot_timer = ($ShootTimer as Timer)
+	
+	shoot_timer.one_shot = not has_automatic_shoot
+	
+	if has_automatic_shoot:
+		shoot_timer.wait_time = 0.2
+	else:
+		shoot_timer.wait_time = 0.15
